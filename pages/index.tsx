@@ -1,89 +1,132 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type {NextPage} from 'next';
+import Head from 'next/head';
+
+/**
+ * A function that returns an array of sweet sweet descriptions.
+ * @param {args} args
+ * @param {args.title} title - string
+ * @param {args.desc} description - string
+ * @return {JSX.Element[]} JSX.Element[]
+ */
+const DescBlock = (args:{title: string, desc: string}[]) =>
+  args.map(({title, desc}) =>
+    <div key={title} className='p-6 mt-4 mx-10 text-left border rounded-lg border-transparent bg-slate-800' >
+      <h3 className='text-xl font-bold'>{title}</h3>
+      <p className='mt-2 text-md'>{desc}</p>
+    </div>
+  );
+
+const SkillBlock = (args:{title: string, skills: string}) =>
+  <div className='p-4 mt-4 text-left w-[17rem] border rounded-lg border-slate-300'>
+    <h3 className='text-lg font-bold'>{args.title}</h3>
+    <p className='mt-2 text-md'>{args.skills}</p>
+  </div>;
 
 const Home: NextPage = () => {
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-slate-900 text-emerald-500'>
-    <Head>
-      <title>Create Next App</title>
-      <link rel='icon' href='/favicon.ico' />
-    </Head>
-
-    <main className='flex flex-col items-center justify-center w-full flex-1 px-20 text-center '>
-      <h1 className='text-6xl font-bold'>
-        Welcome to{' '}
-        <a className='text-blue-500' href='https://nextjs.org'>
-          Next.js!
-        </a>
-      </h1>
-
-      <p className='mt-3 text-2xl'>
-        Get started by editing{' '}
-        <code className='p-3 font-mono text-lg bg-slate-800 text-white rounded-md'>
-          pages/index.js
-        </code>
-      </p>
-
-      <div className='flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full'>
-        <a
-          href='https://nextjs.org/docs'
-          className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
-        >
-          <h3 className='text-2xl font-bold'>Documentation &rarr;</h3>
-          <p className='mt-4 text-xl'>
-            Find in-depth information about Next.js features and API.
+    <div className='flex flex-col items-center min-h-screen bg-slate-900 text-emerald-500'>
+      <Head>
+        <title>Cameron Henry</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <main className='flex flex-col items-center justify-center md:w-[40rem] min-w-0 text-center'>
+        <div className='md:border-x border-t w-full mx-20 pb-1 min-w-0 border-slate-500'>
+          <h1 className='text-6xl font-bold'>
+            Cameron Henry{' '}
+            <a className='text-blue-500' href='www.linkedin.com/in/cameron-henry-exe'>
+              LinkedIn
+            </a>
+          </h1>
+          <p className='mt-3 text-2xl pb-2'>
+              Software Engineer{' '}
+            <code className='p-1 font-mono text-lg bg-slate-800 text-white rounded-md'>
+                I do code!
+            </code>
           </p>
-        </a>
+        </div>
+        <div className='md:border-x mx-20 pb-2 w-full min-w-0 border-slate-500'>
+          <div className='border-t border-slate-500'>
+            <h1 className='flex justify-left ml-10 mt-2 text-3xl font-bold text-sky-300'>
+              About Me
+            </h1>
+            <div className='flex flex-col items-center justify-around mb-2 w-full'>
+              {DescBlock([
+                {
+                  title: 'Perspective towards Scale',
+                  desc: `API design and maintenance - responsible for maintaining a legacy enterprise-grade API in-use by industry recognized customers. 
+                  Responsible for all of the communication, research, and scale considerations associated with non-standard requests and response structures 
+                  from a wide variety of customers on one end, and a 20+ year old legacy system on the other.`,
+                },
+                {
+                  title: 'Collaboration',
+                  desc: `Coordinated with product management, quality assurance, and various development teams to ensure product met product expectations.`,
+                },
+                {
+                  title: 'Testing',
+                  desc: `Working in a stack where QA, and CI/CD is 100% manual, writing out cases to manually verify is of the utmost importance. 
+                  I thoroughly enjoy working on personal projects where these cases can be enshrined and then thoughtfully automated.`,
+                },
+                {
+                  title: 'Project Management',
+                  desc: `Provided high quality user facing applications by coding, testing, documenting, and maintaining programs.`,
+                },
+              ])}
+            </div>
 
-        <a
-          href='https://nextjs.org/learn'
-          className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
-        >
-          <h3 className='text-2xl font-bold'>Learn &rarr;</h3>
-          <p className='mt-4 text-xl'>
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
+          </div>
+          <div>
+            <h1 className='flex justify-left ml-10 mt-6 text-3xl font-bold text-sky-300'>
+              Technical Skills
+            </h1>
+            <div className='flex flex-row justify-between mx-10'>
+              {SkillBlock({
+                title: 'Languages',
+                skills: 'Typescript, JavaScript,  HTML, CSS, SQL, NoSQL, Java,  R',
+              })}
+              {SkillBlock({
+                title: 'Libraries',
+                skills: 'React, React Testing Library, Next.JS, Tailwind, Styled Components, Jest, NestJS',
+              })}
+            </div>
+          </div>
 
-        <a
-          href='https://github.com/vercel/next.js/tree/master/examples'
-          className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
-        >
-          <h3 className='text-2xl font-bold'>Examples &rarr;</h3>
-          <p className='mt-4 text-xl'>
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
+          <div className='mt-6 pr-1'>
+            <h1 className='flex justify-left ml-10 mt-6 text-3xl font-bold text-sky-300'>
+              Experience and Education
+            </h1>
+            <ul className='list-disc mx-10 mt-2 pl-6 text-xl font-bold'>
+              <li className='mt-2'>
+                Reynolds and Reynolds, Houston — Software Engineer
+                <ul className='list-disc pl-5 text-sm font-normal'>
+                  <li>
+                    Develops and supports software for automotive retailers.
+                  </li>
+                  <li>
+                    Researched and resolved issues in existing proprietary framework.
+                  </li>
+                </ul>
+              </li>
+              <li className='mt-2'>
+                Lamar University, Beaumont — B.S. in Computer Science
+                <ul className='list-disc pl-5 text-sm font-normal'>
+                  <li>
+                    Network Systems, OOP paradigms, Database Design, Algorithm Design and Big O Analysis, Compilers, and Assembly Language.
+                  </li>
+                  <li>
+                    Cleaning, coercing, and meaningfully interpreting large datasets with R and microsoft access.
+                  </li>
+                  <li>
+                    Working collectively in an agile workflow.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
 
-        <a
-          href='https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          className='p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600'
-        >
-          <h3 className='text-2xl font-bold'>Deploy &rarr;</h3>
-          <p className='mt-4 text-xl'>
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </div>
+      </main>
+    </div>
+  );
+};
 
-    <footer className='flex items-center justify-center w-full h-24 border-t'>
-      <span className=''>
-        Powered by{' '}
-      </span>
-      
-      <a
-        className='flex items-center justify-center'
-        href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-        target='_blank'
-        rel='noopener noreferrer'
-      >
-        <Image src='/vercel.svg' alt='Vercel Logo' width='72' height='16' className='h-4 ml-2' />
-      </a>
-    </footer>
-  </div>
-  )
-}
-
-export default Home
+export default Home;

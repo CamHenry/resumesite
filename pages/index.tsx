@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                   title: 'Perspective towards Scale',
                   desc: `API design and maintenance - responsible for maintaining a legacy enterprise-grade API in-use by industry recognized customers. 
                   Responsible for all of the communication, research, and scale considerations associated with non-standard requests and response structures 
-                  from a wide variety of customers on one end, and a 20+ year old legacy system on the other.`,
+                  between a wide variety of business partners and a 20+ year old proprietary codebase.`,
                 },
                 {
                   title: 'Collaboration',
@@ -61,7 +61,7 @@ const Home: NextPage = () => {
                 {
                   title: 'Testing',
                   desc: `Working in a stack where QA, and CI/CD is 100% manual, writing out cases to manually verify is of the utmost importance. 
-                  I thoroughly enjoy working on personal projects where these cases can be enshrined and then thoughtfully automated.`,
+                  I thoroughly enjoy working on personal projects where these cases can be thoughtfully automated.`,
                 },
                 {
                   title: 'Project Management',
@@ -97,6 +97,9 @@ const Home: NextPage = () => {
                 <ul className='list-disc pl-5 text-sm font-normal'>
                   <li>
                     Develops and supports software for automotive retailers.
+                  </li>
+                  <li>
+                    Maintain a codebase accessed and used internationally in a CI/CD workflow.
                   </li>
                   <li>
                     Researched and resolved issues in existing proprietary framework.

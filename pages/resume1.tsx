@@ -3,33 +3,6 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 
-// const fuckYou = 'fuck you';
-
-// function noFuckYou(args: {}) { }
-
-// const a = 'a';
-// const b = 'b';
-// const fortyTwo = 42;
-/**
- * string literals
- */
-// const superString = `${a} ${b} ${fortyTwo}` as const;
-// const stringObject = {
-//   a: 'a',
-//   b: 'b',
-//   fortyTwo: 42,
-// };
-// methods are properties on objects
-// superString.a;
-
-// const howBoutFuckYou = (args: string) => {
-//   return ({
-//     fuckYou: 'fuck you',
-//     k: 5,
-//     l: 5,
-//   });
-// };
-
 const Resume: NextPage = () => {
   return (
     <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-slate-900 text-emerald-500'>

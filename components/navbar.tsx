@@ -9,7 +9,7 @@ const Navbar = () => {
             <a className='ml-3 p-1 border rounded-lg bg-emerald-300 text-black text-sm font-bold border-transparent border-slate-500 hover:text-blue-600 '>Home</a>
           </Link>
           <Link href='/about'>
-            <a className='ml-3 p-1 border rounded-lg bg-slate-400 text-black text-sm font-bold border-transparent border-slate-500 hover:text-blue-600 '>About</a>
+            <a className='ml-3 p-1 border rounded-lg bg-slate-400 text-black text-sm font-bold border-transparent border-slate-500 hover:text-blue-600 '>Blog</a>
           </Link>
         </div>
       </nav>

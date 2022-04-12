@@ -1,49 +1,46 @@
 import type {NextPage} from 'next';
 import Head from 'next/head';
-// import Image from 'next/image';
-// import Navbar from '../components/navbar';
-// import Footbar from '../components/footer';
 
-const About: NextPage = () => {
+/**
+ * A function that returns an array of sweet sweet descriptions.
+ * @param {args} args
+ * @param {args.title} title - string
+ * @param {args.desc} description - string
+ * @return {JSX.Element[]} JSX.Element[]
+ */
+
+
+const Home: NextPage = () => {
   return (
-    <div className='flex flex-col items-center min-h-screen border-t bg-slate-900 text-emerald-500'>
+    <div className='flex flex-col items-center min-h-screen bg-slate-900 text-emerald-500'>
       <Head>
         <title>Cameron Henry</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className='flex flex-col items-center justify-center min-w-0 text-center'>
-        <div className='md:w-2/3 md:border-x mx-20 pb-1 min-w-0'>
+      <main className='flex flex-col items-center justify-center md:w-[40rem] min-w-0 text-center'>
+        <div className='md:border-x border-t w-full mx-20 pb-1 min-w-0 border-slate-500'>
           <h1 className='text-6xl font-bold'>
             Cameron Henry{' '}
-            <a className='text-blue-500' href='www.linkedin.com/in/cameron-henry-exe'>
+            <a className='text-blue-500' href='https://www.linkedin.com/in/cameron-henry-exe/' target='_blank' rel='noopener noreferrer'>
               LinkedIn
             </a>
           </h1>
           <p className='mt-3 text-2xl pb-2'>
               Software Engineer{' '}
-            <code className='p-1 font-mono text-lg bg-slate-800 text-white rounded-md'>
-                I do code!
-            </code>
           </p>
         </div>
+        <div className='md:border-x mx-20 pb-2 w-full min-w-0 border-slate-500'>
+          <div className='border-t border-slate-500'>
+            <h1 className='flex justify-left ml-10 mt-2 text-3xl font-bold text-sky-300'>
+              Blog Page WIP
+            </h1>
+
+          </div>
+
+        </div>
       </main>
-
-      {/* <footer className='flex flex-initial items-center justify-center w-full py-4 border-t'>
-        <span className=''>
-          Powered by{' '}
-        </span>
-
-        <a
-          className='flex items-center justify-center'
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image src='/vercel.svg' alt='Vercel Logo' width='72' height='16' className='h-4 ml-2' />
-        </a>
-      </footer> */}
     </div>
   );
 };
 
-export default About;
+export default Home;

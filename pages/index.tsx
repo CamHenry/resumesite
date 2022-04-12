@@ -33,15 +33,12 @@ const Home: NextPage = () => {
         <div className='md:border-x border-t w-full mx-20 pb-1 min-w-0 border-slate-500'>
           <h1 className='text-6xl font-bold'>
             Cameron Henry{' '}
-            <a className='text-blue-500' href='www.linkedin.com/in/cameron-henry-exe'>
+            <a className='text-blue-500' href='https://www.linkedin.com/in/cameron-henry-exe/' target='_blank' rel='noopener noreferrer'>
               LinkedIn
             </a>
           </h1>
           <p className='mt-3 text-2xl pb-2'>
               Software Engineer{' '}
-            <code className='p-1 font-mono text-lg bg-slate-800 text-white rounded-md'>
-                I do code!
-            </code>
           </p>
         </div>
         <div className='md:border-x mx-20 pb-2 w-full min-w-0 border-slate-500'>

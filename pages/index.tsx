@@ -42,8 +42,11 @@ const Home: NextPage = () => {
             <h1 className='ml-3 text-left text-5xl font-bold'>
               Cameron Henry{' '}
             </h1>
-            <p className='ml-4 mt-1 pb-2 text-left text-2xl text-sky-300'>
+            <p className='ml-4 mt-1 text-left text-2xl text-sky-300'>
               Software Engineer{' '}
+            </p>
+            <p className='ml-4 mb-3 text-xs text-left text-sky-400'>
+              cameronhenryexe@gmail.com
             </p>
             <p className='mx-4 mt-1 mb-3 text-sm text-left'>
                 I am an experienced software engineer with 5 years of industry experience open to remote opportunities.

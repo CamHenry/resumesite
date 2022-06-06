@@ -16,7 +16,7 @@ const DescBlock = (args:{title: string, desc: string}[]) =>
     </div>
   );
 
-const styleBlocks1 = 'p-4 mt-4 text-left w-[17rem] border-2 rounded-lg border-slate-400';
+const styleBlocks1 = 'p-4 mt-4 text-left md:w-[17rem] border-2 rounded-lg border-slate-400';
 
 const SkillBlock = (args:{title: string, skills: string}) =>
   <div className = {styleBlocks1} >
@@ -26,19 +26,13 @@ const SkillBlock = (args:{title: string, skills: string}) =>
 
 const Home: NextPage = () => {
   return (
-    <div className='bg-slate-900'>
+    <div className='bg-slate-900 '>
       <div className='flex flex-col items-center min-h-screen text-emerald-500'>
         <Head>
           <title>Cameron Henry</title>
         </Head>
         <main className='flex flex-col items-center justify-center md:w-[40rem] min-w-0 text-center'>
           <div className='md:border-x border-t w-full mx-20 pb-1 min-w-0 border-slate-500'>
-            {/* <h1 className='text-6xl font-bold'>
-              Cameron Henry{' '}
-            </h1>
-            <p className='mt-1 pb-2 text-3xl text-sky-300'>
-              Software Engineer{' '}
-            </p> */}
             <h1 className='ml-3 text-left text-5xl font-bold'>
               Cameron Henry{' '}
             </h1>
